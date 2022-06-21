@@ -30,7 +30,7 @@ public class CreatePurchaseOrderAndSelectAssignedToInThatSelectUserTest extends 
 		String BillingCountry=eLib.getDataFromExcelSheet(IPathConstant.excelPath,"PurchaseOrderSheet",1, 11);
 		String Quantity=eLib.getDataFromExcelSheet(IPathConstant.excelPath,"PurchaseOrderSheet",1, 12);
 		
-		//Create Random Number
+		
 		int RandNum=jLib.getRandomNumber(500);
 		
 		//Create Random Product Name
