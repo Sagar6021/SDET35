@@ -18,7 +18,7 @@ public class AnimalTest {
 		Reporter.log("Medium",true);
 		
 	}
-	//delete project
+	
 	@Test()
 	public void ratTest() {
 		Reporter.log("Small",true);
