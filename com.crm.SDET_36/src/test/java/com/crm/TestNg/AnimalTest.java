@@ -10,13 +10,13 @@ public class AnimalTest {
 	@Test()
 	public void elephanteTest() {
 		Reporter.log("Big",true);
-		
+			
 	
 	}
 	@Test(dependsOnMethods = "elephanteTest")
 	public void dogTest() {
 		Reporter.log("Medium",true);
-		
+		System.out.println("Hi");
 	}
 	
 	@Test()
