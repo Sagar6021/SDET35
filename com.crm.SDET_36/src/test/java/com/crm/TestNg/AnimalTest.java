@@ -16,6 +16,7 @@ public class AnimalTest {
 	@Test(dependsOnMethods = "elephanteTest")
 	public void dogTest() {
 		Reporter.log("Medium",true);
+		System.out.println("Hi");
 		
 	}
 	
