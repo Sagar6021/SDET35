@@ -50,6 +50,7 @@ public class BaseClass  {
     	//String URL=System.getProperty("url");
        String BROWSER=fLib.getPropertyKeyValue(IPathConstant.filePath, "browser");
 	//String BROWSER=System.getProperty("browser");
+       System.out.println("Bye");
 	
 			
 	if(BROWSER.equalsIgnoreCase("chrome")) {
