@@ -40,15 +40,15 @@ public class BaseClass  {
     public void connectToDataBase() {
     dLib.dataBaseConfiguration();
     }
-    @Parameters("BROWSER")/*This One for Cross Browser Execution*/
+   // @Parameters("BROWSER")/*This One for Cross Browser Execution*/
     @BeforeClass(groups = {"SmokeTest","RegressionTest"})
-     public void launchThebrowser(String BROWSER) throws Throwable {/*This One for Cross Browser Execution*/
-    //	 public void launchThebrowser() throws Throwable {
+    // public void launchThebrowser(String BROWSER) throws Throwable {/*This One for Cross Browser Execution*/
+   	 public void launchThebrowser() throws Throwable {
     	System.out.println("Launch the Browser");
 	//Fetch data from Property File
     	String URL=fLib.getPropertyKeyValue(IPathConstant.filePath, "url");
     	//String URL=System.getProperty("url");
-    	//String BROWSER=fLib.getPropertyKeyValue(IPathConstant.filePath, "browser");
+    	String BROWSER=fLib.getPropertyKeyValue(IPathConstant.filePath, "browser");
     	//String BROWSER=System.getProperty("browser");
 	
 			
