@@ -45,7 +45,7 @@
   </dependencies>
   <profiles>
   <profile>
-  <id>Parallel</id>
+  <id>ParallelID</id>
   <build>
   <plugins>
      <plugin>
