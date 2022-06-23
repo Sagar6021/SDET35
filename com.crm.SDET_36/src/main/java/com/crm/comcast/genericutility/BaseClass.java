@@ -55,14 +55,17 @@ public class BaseClass  {
 	if(BROWSER.equalsIgnoreCase("chrome")) {
 	    WebDriverManager.chromedriver().setup();
 		 driver=new ChromeDriver();
+		 System.out.println("Launch Chrome Browser ");
 			}
 	else if(BROWSER.equalsIgnoreCase("Firefox")){
 		WebDriverManager.firefoxdriver().setup();
 		 driver=new FirefoxDriver();
+		 System.out.println("Launch Firefox Browser ");
 		}
 	else {
 		WebDriverManager.chromedriver().setup();
 	    driver=new ChromeDriver();
+	    System.out.println("Launch Chrome Browser ");
 	  }
 	 //Enter Url
 	sdriver=driver;
