@@ -9,6 +9,8 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
+
 import com.crm.objectRepository.HomePage;
 import com.crm.objectRepository.LoginPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -38,16 +40,16 @@ public class BaseClass  {
     public void connectToDataBase() {
     dLib.dataBaseConfiguration();
     }
-   // @Parameters("BROWSER")/*This One for Cross Browser Execution*/
+    @Parameters("BROWSER")/*This One for Cross Browser Execution*/
     @BeforeClass(groups = {"SmokeTest","RegressionTest"})
-    //	 public void launchThebrowser(String BROWSER) throws Throwable {/*This One for Cross Browser Execution*/
-    	  public void launchThebrowser() throws Throwable {
+     public void launchThebrowser(String BROWSER) throws Throwable {/*This One for Cross Browser Execution*/
+    //	 public void launchThebrowser() throws Throwable {
     	System.out.println("Launch the Browser");
 	//Fetch data from Property File
-    	//String URL=fLib.getPropertyKeyValue(IPathConstant.filePath, "url");
-    	String URL=System.getProperty("url");
+    	String URL=fLib.getPropertyKeyValue(IPathConstant.filePath, "url");
+    	//String URL=System.getProperty("url");
     	//String BROWSER=fLib.getPropertyKeyValue(IPathConstant.filePath, "browser");
-	 String BROWSER=System.getProperty("browser");
+    	//String BROWSER=System.getProperty("browser");
 	
 			
 	if(BROWSER.equalsIgnoreCase("chrome")) {
