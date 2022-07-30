@@ -45,7 +45,7 @@
   </dependencies>
   <profiles>
   <profile>
-  <id>Parallel</id>
+  <id>ParallelID</id>
   <build>
   <plugins>
      <plugin>
@@ -54,7 +54,7 @@
         <version>3.0.0-M7</version>
         <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>testng_DistributedParallelExecution.xml</suiteXmlFile>
+            <suiteXmlFile>testng_CrossBrowserExecution.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
@@ -72,7 +72,23 @@
         <configuration>
           <suiteXmlFiles>
             <suiteXmlFile>testng_batchExecution.xml</suiteXmlFile>
-            <suiteXmlFile>testng_DistributedParallelExecution.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+      </plugins>
+ </build>
+ </profile>
+ <profile>
+  <id>DParallelId</id>
+  <build>
+  <plugins>
+     <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M7</version>
+        <configuration>
+          <suiteXmlFiles>
+              <suiteXmlFile>testng_DistributedParallelExecution.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
